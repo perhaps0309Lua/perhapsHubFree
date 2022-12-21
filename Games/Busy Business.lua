@@ -1,8 +1,8 @@
 local Repository = 'https://raw.githubusercontent.com/perhaps0309Lua/perhapsHubFree/main/'
 
-local Library = loadstring(game:HttpGet(Repository..'Library.lua'))()
-local ThemeManager = loadstring(game:HttpGet(Repository..'Addons/ThemeManager.lua'))()
-local SaveManager = loadstring(game:HttpGet(Repository..'Addons/SaveManager.lua'))()
+local Library = loadstring(game:HttpGet(Repository..'Library/Library.lua'))()
+local ThemeManager = loadstring(game:HttpGet(Repository..'Library/Addons/ThemeManager.lua'))()
+local SaveManager = loadstring(game:HttpGet(Repository..'Library/Addons/SaveManager.lua'))()
 
 local Window = Library:CreateWindow({Title = "Busy Business - perhapsHub Free", Center = true, AutoShow = true})
 
@@ -27,7 +27,7 @@ local function setDuration(Object)
     end
 end
 
-local holdSlider = mainTab:AddSlider("Hold Time", {Min = 0, Max = 5, Default = 0.4, Rounding = 1, Callback = function(Value) 
+local holdSlider = mainGroup:AddSlider("Hold Time", {Min = 0, Max = 5, Default = 0.4, Rounding = 1, Compact = false, Callback = function(Value) 
     for i, Object in pairs(currentPlot:GetDescendants()) do
         setDuration(Object)
     end

@@ -5,5 +5,5 @@ local issynapsefunction = isexecutorclosure or is_synapse_function or issynapsef
 getgenv().issynapsefunction = issynapsefunction
 
 if game.GameId == 3937036363 then 
-    loadstring(game:HttpGet(Repository..'Busy Business.lua'))()
+    loadstring(game:HttpGet(Repository..'Busy%20Business.lua'))()
 end 
